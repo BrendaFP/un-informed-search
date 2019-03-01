@@ -25,3 +25,6 @@ if __name__ == "__main__":
     #    print (initial[x][0])
     #for x in range(len(goal)): 
     #    print (goal[x])
+
+
+    #sñldkfjñaslkjf
