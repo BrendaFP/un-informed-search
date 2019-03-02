@@ -43,7 +43,7 @@ def expand(state, max_height):
                 new_state = [x[:] for x in state]
                 new_state[j].append(new_state[i][-1])
                 new_state[i] = new_state[i][:-1]
-                cost = 0.5 + abs(i-j) + 0.5
+                cost = abs(i-j) + 1
                 nodes.append((cost,new_state,(i,j)))
                 #print(nodes)
     return nodes
@@ -93,7 +93,7 @@ if __name__ == "__main__":
                 new_node = Node(auxCont, auxCost, auxState, auxPath)
         
                 q.put(new_node)
-    print(current.cost)
+    print(int(current.cost))
     final_path = map(str, current.path)
     print('; '.join(final_path))
     exit()
