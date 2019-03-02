@@ -23,17 +23,11 @@ def convert_array(array):
     return array
 
 def is_goal(current, goal):
-  for i in range(len(current)):
-    if len(goal[i])>0 and goal[i][0] == ['X']:
-        continue
-    if len(goal[i])>0 and goal[i][0] != ['X']:
-        if(len(current[i]) != len(goal[i])):
-            return False
-    
-        for j in range(len(current[i])):
-          if current[i][j] != goal[i][j]:
-            return False
-  return True
+    for i in range(len(current)):
+        if goal[i] != ['X']:
+            if(goal[i] != current[i]):
+                return False
+    return True
 
 def expand(state, max_height):
     nodes = []
